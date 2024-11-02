@@ -12,3 +12,6 @@ Fiz um mini projeto pra testar a conexão como se fosse um banco SQL local usand
  - Depois de criado é possivel utilizar o método Get
 
 PS-Essa versão foi para estudos dos métodos por enquando.
+
+# PROXIMOS passos
+- escanear os dados do arquivo e conectar com um banco remoto
