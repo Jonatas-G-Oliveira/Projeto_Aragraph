@@ -10,4 +10,5 @@ public interface AveService {
     Ave getAveByTaxon(String taxon);
     Ave getAveByNomeComum(String nomeComum);
     List<Ave> getAveByFamilia(String familia);
+    List<Ave> getAllAves();
 }

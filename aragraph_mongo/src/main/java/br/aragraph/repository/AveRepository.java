@@ -11,5 +11,6 @@ public interface AveRepository extends MongoRepository<Ave,Long>{
     //METODOS GET para o BD
     Ave findByTaxon(String taxon);
     Ave findByNomeComum(String nomeComum);
-    //List<Ave> findByFamilia(String familia);
+ 
+    List<Ave> findByFamilia(String familia);
 }

@@ -4,8 +4,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 //Anotação para o MongoDB
-//Pra que serve collation??
-@Document //(collation = "ave")
+//Collecion é nome da coleção que estamos manipulando
+@Document (collection = "aves_collection")
 public class Ave {
     
     @Id

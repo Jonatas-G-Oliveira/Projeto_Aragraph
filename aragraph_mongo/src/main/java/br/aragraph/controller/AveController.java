@@ -4,6 +4,7 @@ package br.aragraph.controller;
 
 import br.aragraph.model.Ave;
 import br.aragraph.service.AveService;
+import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +33,6 @@ public class AveController {
     //Temos problemas porque temos dois ID's nnos nossos pássaros
     //Ele entra em conflito quando tem pegar um pássaro 
     
-    
     @GetMapping("/taxon/{taxon}")
     public ResponseEntity <Ave> getAveByTaxon(@PathVariable String taxon){
         Ave ave_encontrada = aveService.getAveByTaxon(taxon);
@@ -44,7 +44,23 @@ public class AveController {
         Ave ave_encontrada = aveService.getAveByNomeComum(nome_comum);
         return ResponseEntity.ok().body(ave_encontrada);
     }
+    
+    @GetMapping("/familia/{familia}")
+    public ResponseEntity <List<Ave>> getAveByFamilia(@PathVariable String familia){
+        List<Ave> ave_encontrada = aveService.getAveByFamilia(familia);
+        return ResponseEntity.ok().body(ave_encontrada);
+    }
+    @GetMapping("/nome/todas")
+    public ResponseEntity <List<Ave>> getAllAves(){
+        List<Ave> ave_encontrada = aveService.getAllAves();
+        return ResponseEntity.ok().body(ave_encontrada);
+    }
    
+    
+   
+    
+    
+    
     @PostMapping("/addAve")
     public void create(@RequestBody Ave ave){
         aveService.create(ave);

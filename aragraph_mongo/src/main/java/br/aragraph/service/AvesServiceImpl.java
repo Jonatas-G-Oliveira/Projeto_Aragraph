@@ -6,9 +6,6 @@ import br.aragraph.model.Ave;
 import org.springframework.stereotype.Service;
 import br.aragraph.repository.AveRepository;
 import java.util.List;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 
 
 
@@ -42,13 +39,16 @@ public class AvesServiceImpl implements AveService {
 
     @Override
     public List<Ave> getAveByFamilia(String familia) {
-        //Eu tenho que retornar listas...
-        //Usar lista ou pages...
-        //O que é pageReqquest?
-        //Page<Ave> aves = aveRepository.findByFamilia(new PageRequest(0,10,Sort.Direction.ASC));
-        
-        return null;
+        return aveRepository.findByFamilia(familia);
     }
+    
+    @Override
+    public List<Ave> getAllAves(){
+        return aveRepository.findAll();
+        //se for vazio implementar exceção
+    }
+    
+    
     
     
     
