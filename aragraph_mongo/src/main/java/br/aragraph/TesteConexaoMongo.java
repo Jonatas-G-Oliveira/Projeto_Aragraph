@@ -22,7 +22,7 @@ public class TesteConexaoMongo implements CommandLineRunner {
         System.out.println("ola mundo");
         
         
-        String connectionString = "mongodb+srv://Aragraph:aragraph2024@clustearagraph.wnekp.mongodb.net/?retryWrites=true&w=majority&appName=ClusteAragraph";
+        String connectionString = "mongodb+srv://Aragraph:aragraph2024@clusteraragraph.wnekp.mongodb.net/?retryWrites=true&w=majority&appName=ClusterAragraph";
         
         ServerApi serverApi = ServerApi.builder()
                 .version(ServerApiVersion.V1)

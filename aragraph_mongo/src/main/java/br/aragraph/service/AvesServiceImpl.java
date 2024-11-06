@@ -6,6 +6,7 @@ import br.aragraph.model.Ave;
 import org.springframework.stereotype.Service;
 import br.aragraph.repository.AveRepository;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 
 
@@ -17,16 +18,17 @@ public class AvesServiceImpl implements AveService {
     
     private final AveRepository aveRepository;
     
-    
     public AvesServiceImpl(AveRepository aveRepository){
         this.aveRepository = aveRepository;
     }
     
+    //METODOS GET
     @Override
-    public Ave create(Ave ave){
-       return aveRepository.save(ave);
+    public Ave getAveByID(Long id){
+        return aveRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        
     }
-    
+     
     @Override
     public Ave getAveByTaxon(String taxon){
         return aveRepository.findByTaxon(taxon);
@@ -46,6 +48,16 @@ public class AvesServiceImpl implements AveService {
     public List<Ave> getAllAves(){
         return aveRepository.findAll();
         //se for vazio implementar exceção
+    }
+    
+    
+    //METODOS POST
+    @Override
+    public Ave create(Ave ave){
+        if(aveRepository.existsByNomeComum(ave.getNomeComum())){
+            throw new IllegalArgumentException("Essa nome de ave já foi criada");
+        }
+        return aveRepository.save(ave);
     }
     
     
