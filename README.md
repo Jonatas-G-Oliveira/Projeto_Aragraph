@@ -5,13 +5,12 @@
 - A API faz busca para taxon e nome comum
 
 # Como testar?
- - Iniciar a aplicação Spring no Java
- - Testar:
- - http://localhost:8080/swagger-ui
- - (Não vai funcionar agora porque estou usando localmente)
+ - Aplicação será enviada para nuvem dia 6/11
 
 # DUVIDAS 
-
+- Como dar fetch no front?
+- Como rendereizar uma lista
+- Como adicionar um evento Hover pra mostrar uma informação
 
 # MELHORIAS
 - Fazer deploy do back
