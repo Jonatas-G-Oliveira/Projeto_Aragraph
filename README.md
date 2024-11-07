@@ -15,8 +15,9 @@
 -  Pegar ave por familila: /aves/familia/{nome_familia}
 
 # DUVIDAS 
+- Pra rodar o servidor onde que a aplicação tem que estar?
 - Como dar fetch no front?
-- Como rendereizar uma lista
+- Como renderizar uma lista
 - Como adicionar um evento Hover pra mostrar uma informação
 
 # MELHORIAS
