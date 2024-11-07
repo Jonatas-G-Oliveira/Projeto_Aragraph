@@ -16,6 +16,7 @@
 
 # DUVIDAS 
 - Pra rodar o servidor onde que a aplicação tem que estar?
+- A instancia tem q rodar o comando mesmo quando eu for fechar o terminal
 - Como dar fetch no front?
 - Como renderizar uma lista
 - Como adicionar um evento Hover pra mostrar uma informação
