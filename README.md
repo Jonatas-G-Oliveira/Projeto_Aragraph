@@ -12,7 +12,7 @@
 -  Padrão: http://44.200.204.104:8080/
 -  Pegar todas as aves: /aves/nome/todas
 -  Pegar aves por id: /aves/id/{numero_id}
--  Pegar ave por familila: /aves/id/{nome_familia}
+-  Pegar ave por familila: /aves/familia/{nome_familia}
 
 # DUVIDAS 
 - Como dar fetch no front?
