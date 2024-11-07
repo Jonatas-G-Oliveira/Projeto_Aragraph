@@ -1,22 +1,26 @@
 
 
 # RESULTADOS
-- A aplicação esta configurada para conectar e trabalhar com um banco mongoDB
+- A aplicação esta configurada para conectar e trabalhar com um banco mongoDB na CLOUD
 - A API faz busca para taxon e nome comum
-- A API retorna um unico item para as busca
-
+- API esta rodando na AWS em uma instancia ubuntu
+- O front renderiza uma lista vinda da API
+  
 # Como testar?
- - Iniciar a aplicação Spring no Java
- - Testar:
- - http://localhost:8080/swagger-ui
- - (Não vai funcionar agora porque estou usando localmente)
+- Voce pode testar todos os endpoints atraves da url do swagger
+- http://44.200.204.104:8080/swagger-ui.html
+- Ou acessar pelas rotas
+- Padrão: http://44.200.204.104:8080/
+- Pegar todas as aves: /aves/nome/todas
+- Pegar aves por id: /aves/id/{numero_id}
+- Pegar ave por familila: /aves/familia/{nome_familia}
 
 # DUVIDAS 
-- Porque o arquivo tem dois ID's diferentes(gera conflito na busca)
-- Como retornar uma lista de objetos(tem que usar Page?)
-- Como conectar a um banco externo
+- Pra rodar o servidor onde que a aplicação tem que estar?
+- A instancia tem q rodar o comando mesmo quando eu for fechar o terminal
+- Como adicionar um evento Hover pra mostrar uma informação
 
 # MELHORIAS
-- Implementar excessões
-- Implementar os utros métodos GET
-- Fazer os métodos retornarem lista de JSON
+- HTML e CSS estão muito pobres(versao de testes)
+- Clicar na lista de passaros e mostrar um card
+- Adicionar o card a a tela de visualizacao
