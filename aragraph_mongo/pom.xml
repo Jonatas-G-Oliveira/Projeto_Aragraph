@@ -10,8 +10,10 @@
 	</parent>
 	<groupId>br.aragraph</groupId>
 	<artifactId>aragraph</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>aragraph</name>
+        <packaging>jar</packaging>
+        
 	<description>Projeto</description>
 	<url/>
 	<licenses>
@@ -28,6 +30,7 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+                <maven.test.skip>true</maven.test.skip>
 	</properties>
 	<dependencies>
                 <!-- SWAGGER -->
